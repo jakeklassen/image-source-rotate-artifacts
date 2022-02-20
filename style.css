@@ -1,0 +1,23 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  background-image: linear-gradient(#484e55, #3a3f44 60%, #313539);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+canvas {
+  margin: auto;
+  padding: 0;
+  display: block;
+  background-color: gray;
+  transform: scale(3, 3);
+  image-rendering: pixelated;
+}

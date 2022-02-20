@@ -1,0 +1,29 @@
+{
+  "name": "image-source-rotate-artifacts",
+  "version": "1.0.0",
+  "repository": "git@github.com/jakeklassen/image-source-rotate-artifacts",
+  "author": "Jake Klassen <jklassendev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.cjs,.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.0",
+    "@types/node": "16.11.25",
+    "@typescript-eslint/eslint-plugin": "5.12.0",
+    "@typescript-eslint/parser": "5.12.0",
+    "comment-json": "4.2.2",
+    "eslint": "8.9.0",
+    "eslint-config-prettier": "8.4.0",
+    "esno": "0.14.1",
+    "jest": "27.5.1",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.3",
+    "typescript": "4.5.5",
+    "vite": "2.8.4"
+  }
+}
