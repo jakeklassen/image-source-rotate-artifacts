@@ -12,14 +12,22 @@ const loadImage = (src: string): Promise<HTMLImageElement> =>
 
 const image = await loadImage(spritesheetUrl);
 
-const canvas = document.querySelector<HTMLCanvasElement>("canvas")!;
+const canvas = document.querySelector<HTMLCanvasElement>("canvas");
+if (canvas == null) {
+  throw new Error("Canvas not found");
+}
+
 canvas.width = 256;
 canvas.height = 144;
 
-const ctx = canvas.getContext("2d")!;
+const ctx = canvas.getContext("2d");
+if (ctx == null) {
+  throw new Error("Canvas context not found");
+}
+
 ctx.imageSmoothingEnabled = false;
 
-function frame(hrt: DOMHighResTimeStamp) {
+const frame = (hrt: DOMHighResTimeStamp) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.translate(canvas.width / 2, canvas.height / 2);
@@ -30,6 +38,6 @@ function frame(hrt: DOMHighResTimeStamp) {
   ctx.resetTransform();
 
   requestAnimationFrame(frame);
-}
+};
 
 requestAnimationFrame(frame);
